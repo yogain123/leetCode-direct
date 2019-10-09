@@ -15,6 +15,5 @@
  * @return {ListNode}
  */
 var deleteDuplicates = function(head) {
-    console.log(head);
+  console.log(head);
 };
-

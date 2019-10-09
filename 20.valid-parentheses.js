@@ -10,31 +10,28 @@
  * @return {boolean}
  */
 var isValid = function(s) {
-    let res = [];
-    for(let letter of s){  
-        if(res[res.length-1]!==check(letter))
-            res.push(letter)
-        else
-            res.pop(letter)
-    }
-    return res.length===0?true:false
+  let res = [];
+  for (let letter of s) {
+    if (res[res.length - 1] !== check(letter)) res.push(letter);
+    else res.pop(letter);
+  }
+  return res.length === 0 ? true : false;
 };
 
-function check(symbol){
-    switch(symbol){
-        case "[":
-            return "]";
-        case "]":
-            return "[";
-        case "{":
-            return "}";
-        case "}":
-            return "{";
-        case "(":
-            return ")";
-        case ")":
-            return "(";
-    }
+function check(symbol) {
+  switch (symbol) {
+    case "[":
+      return "]";
+    case "]":
+      return "[";
+    case "{":
+      return "}";
+    case "}":
+      return "{";
+    case "(":
+      return ")";
+    case ")":
+      return "(";
+  }
 }
 // @lc code=end
-

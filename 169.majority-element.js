@@ -10,23 +10,22 @@
  * @return {number}
  */
 var majorityElement = function(nums) {
-    let obj = {};
-    for(let i of nums){
-        obj[i] = obj[i] + 1 || 1;
-    }
-    return getMax(obj);
+  let obj = {};
+  for (let i of nums) {
+    obj[i] = obj[i] + 1 || 1;
+  }
+  return getMax(obj);
 };
 
-function getMax(obj){
-    let max = -Infinity;
-    let res; 
-    for(let [key, value] of Object.entries(obj)){
-        if(value > max){
-            max=value;
-            res=key;
-        }
+function getMax(obj) {
+  let max = -Infinity;
+  let res;
+  for (let [key, value] of Object.entries(obj)) {
+    if (value > max) {
+      max = value;
+      res = key;
     }
-    return res;
+  }
+  return res;
 }
 // @lc code=end
-

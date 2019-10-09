@@ -8,8 +8,6 @@
  * @return {number}
  */
 var lengthOfLastWord = function(s) {
-    if(s.length === 0 || s.charAt(s.length-1)===" " || s==="a ")
-        return 0;
-    return s.split(" ")[s.split(" ").length-1].length
+  if (s.length === 0 || s.charAt(s.length - 1) === " " || s === "a ") return 0;
+  return s.split(" ")[s.split(" ").length - 1].length;
 };
-

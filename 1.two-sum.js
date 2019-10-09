@@ -9,6 +9,5 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    return nums
+  return nums;
 };
-
