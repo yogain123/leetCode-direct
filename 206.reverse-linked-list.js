@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode id=234 lang=javascript
+ * @lc app=leetcode id=206 lang=javascript
  *
- * [234] Palindrome Linked List
+ * [206] Reverse Linked List
  */
 
 // @lc code=start
@@ -14,16 +14,12 @@
  */
 /**
  * @param {ListNode} head
- * @return {boolean}
+ * @return {ListNode}
  */
-var isPalindrome = function(head) {
+var reverseList = function(head) {
   let arr = convertLinkedListtoArray(head);
-  let revArr = [...arr].reverse();
-  let arrString = arr.join(" ");
-  let revArrString = revArr.join(" ");
-  //let lol = convertArrayToLinkedList(arr);
-  //console.log(lol);
-  return arrString === revArrString;
+  arr.reverse();
+  return convertArrayToLinkedList(arr);
 };
 
 function convertLinkedListtoArray(temp) {
